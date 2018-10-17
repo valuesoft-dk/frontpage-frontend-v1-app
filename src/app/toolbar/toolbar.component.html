@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <span>adal-angular4</span>
+  
+    <!-- This fills the remaining space of the current row -->
+    <span class="fill-remaining-space"></span>
+  
+    <div fxLayout="row" fxLayoutAlign="end">
+        <button mat-button (click)="navigate('/home')">Home</button>      
+        <button mat-button (click)="navigate('/protected')">Protected</button>      
+      <button mat-button *ngIf="!authenticated" (click)="login()">Login</button>
+      <button mat-button *ngIf="authenticated" (click)="logout()">Logout</button>
+    </div>
+
+    
+  </mat-toolbar>

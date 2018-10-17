@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
+import { AdalService } from 'adal-angular4';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontpage-frontend-v1-app';
+
+  constructor(private adalService: AdalService) {
+    this.adalService.init(environment.config);
+  } 
 }
