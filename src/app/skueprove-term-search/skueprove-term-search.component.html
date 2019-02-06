@@ -1,0 +1,9 @@
+<div mat-dialog-content class="form-group">
+  <form name="searchForm" (keydown.enter)="$event.preventDefault()">
+    <mat-form-field>
+      <span matPrefix></span>
+      <input #searchTermField name="searchTermField" (keyup)="updateSearchTerm($event)" [(ngModel)]="searchTerm" type="text" matInput placeholder="Indtast nr." autofocus>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </form>
+</div>

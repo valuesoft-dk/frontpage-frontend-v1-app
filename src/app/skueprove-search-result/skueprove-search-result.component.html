@@ -1,0 +1,45 @@
+<app-loader></app-loader>
+
+<div class="input-components">
+  <app-skueprove-term-search></app-skueprove-term-search>
+  <app-numeric-keypad></app-numeric-keypad>
+</div>
+
+<div class="output-components">
+  <div class="parent-container" class="skueprove-table">
+
+    <table mat-table [dataSource]="dataSource">
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let skueprove; let i = index" (click)="edit($event, skueprove, i)" matTooltip="Edit address">
+          <mat-icon>edit</mat-icon>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="rno">
+        <th mat-header-cell *matHeaderCellDef>Værktøj nr.</th>
+        <td mat-cell *matCellDef="let skueprove">{{skueprove.Rno}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="gr8">
+        <th mat-header-cell *matHeaderCellDef>Placering</th>
+        <td mat-cell *matCellDef="let skueprove">{{skueprove.Gr8}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="descr">
+        <th mat-header-cell *matHeaderCellDef>Beskrivelse</th>
+        <td mat-cell *matCellDef="let skueprove">{{skueprove.Descr}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="inf">
+        <th mat-header-cell *matHeaderCellDef>Tegning nr.</th>
+        <td mat-cell *matCellDef="let skueprove">{{skueprove.Inf}}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true;"></tr>
+      <tr mat-row *matRowDef="let skueprove; columns: displayedColumns;let i = index" class="skueprove-element-row"></tr>
+    </table>
+
+  </div>
+</div>

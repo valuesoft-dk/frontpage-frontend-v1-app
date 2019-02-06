@@ -5,11 +5,8 @@
 export const environment = {
   production: false,
   config: {
-    tenant: 'valuesoftplayground.onmicrosoft.com',
-    clientId: '845429f7-22c8-41d2-90b6-dd125ed3a185',
-    redirectUri: 'http://localhost:4200',
-    postLogoutRedirectUri: 'http://localhost:4200',
-    endpoints: { 'https://myauthappbackend.azurewebsites.net':'75be4b3d-bff7-4bee-8986-5858556ee463' }
+    sharepointUrl: 'http://intranet.molytex.dk/kvalitet',    
+    vismaApiBaseUrl: 'http://visma.molytex.local/api'
   }
 };
 

@@ -1,0 +1,47 @@
+<div class="form-container">
+  <div [formGroup]="form">
+
+    <mat-tab-group class="skueprove-tab-group">
+      <mat-tab label="Skueprøve">
+        <div class="skueprove-group">
+          <!-- <div class="col-md-3">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Vare nr." formControlName="ProdNo" [readonly]=true />
+            </mat-form-field>
+          </div>
+          <div class="col-md-3">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Type" formControlName="ProdTp" autofocus />
+            </mat-form-field>
+          </div>
+          <div class="col-md-3">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Beskrivelse" formControlName="Descr" />
+            </mat-form-field>
+          </div>
+          <div class="col-md-3">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Tegning nr." formControlName="Inf" />
+            </mat-form-field>
+          </div> -->
+          <div class="col-md-3">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Værktøj nr." formControlName="Rno" [readonly]=true />
+            </mat-form-field>
+          </div>
+          <div class="col-md-3">
+            <mat-form-field class="full-width-input">
+              <input matInput placeholder="Placering" formControlName="Gr8" autofocus />
+            </mat-form-field>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="col-md-3">
+      <button class="button" mat-raised-button color="primary" (click)="submit($event, form.value)" cdkFocusInitial>Gem</button>
+      <button class="button" mat-button (click)="cancel($event)">Annullér</button>
+    </div>
+  </div>
+
+</div>

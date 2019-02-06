@@ -36,10 +36,12 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-  MatFormFieldModule,
+  MatFormFieldModule
 } from '@angular/material';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -83,7 +85,10 @@ import { CdkTreeModule } from '@angular/cdk/tree';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    MatFormFieldModule,    
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule
+    // FlexLayoutModule,    
   ],
   declarations: []
 })

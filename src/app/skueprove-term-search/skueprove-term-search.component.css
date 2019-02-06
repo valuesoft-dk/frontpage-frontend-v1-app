@@ -1,0 +1,13 @@
+.form-group {
+    min-height:100px;
+}
+
+/deep/ .form-group input {
+    /* width:270px; */
+    border: none!important;
+}
+
+/deep/ .mat-form-field-infix {
+    width:150px!important;
+}
+ 

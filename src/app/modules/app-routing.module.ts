@@ -1,21 +1,29 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { AdalGuard } from 'adal-angular4';
-import { HomeComponent } from '../home/home.component';
-import { ProtectedComponent } from '../protected/protected.component';
-import { AuthGuardService } from '../services/auth-guard.service';
-import { AuthCallbackComponent } from '../auth-callback/auth-callback.component';
+import { SkueproveSearchResultComponent } from '../skueprove-search-result/skueprove-search-result.component';
+import { SkueproveEditComponent } from '../skueprove-edit/skueprove-edit.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'skueprover',
     pathMatch: 'full'
   },
-  { path: 'home', component: HomeComponent },
-  { path: 'protected', component: ProtectedComponent, canActivate: [AuthGuardService]},
-  { path: 'auth-callback', component: AuthCallbackComponent },
+  // { path: 'search', component: SkueproveSearchResultComponent },
+  {
+    path: 'skueprover',
+    children: [
+      {
+        path: '',
+        component: SkueproveSearchResultComponent
+      },
+      {
+        path: ':rno/edit',
+        component: SkueproveEditComponent
+      },      
+    ]
+  }
 ];
 
 @NgModule({

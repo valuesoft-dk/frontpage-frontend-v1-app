@@ -1,0 +1,47 @@
+th, td {
+  padding: 0 20px 0 0!important;
+}
+
+table.skueprove-table th:nth-child(1),
+table.skueprove-table td:nth-child(1) {
+  text-align: center;
+}
+
+th.mat-header-cell {
+  font-size: inherit;
+  font-weight: 500;
+  color: #300C72;
+  background-color: #fff;
+  white-space: nowrap;
+}
+
+tr.skueprove-element-row:hover {
+  background: #FFF9C4;
+  cursor: pointer;
+}
+
+tr.skueprove-element-row:active {
+  background: #FFFDE7;
+  cursor: pointer;    
+}
+
+/deep/ .mat-tooltip {
+  font-size: 13px!important;
+}
+
+.button {
+  margin-right: 15px;
+}
+
+.grey-icon {
+color: lightgrey;;
+}
+
+.input-components {
+  float: left;
+  margin-right: 20px;
+}
+
+.output-components {
+  float: left;
+}

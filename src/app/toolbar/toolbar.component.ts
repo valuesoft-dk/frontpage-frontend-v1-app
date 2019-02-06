@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AdalService } from 'adal-angular4';
 import { Router } from '@angular/router';
+import { VismaService } from '../services/visma.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -10,28 +10,17 @@ import { Router } from '@angular/router';
 export class ToolbarComponent implements OnInit {
 
   constructor(
-    private adalService: AdalService,
-    private router: Router    
+    private router: Router,
+    private vismaService: VismaService
   ) { }
 
   ngOnInit() {
-    this.adalService.handleWindowCallback();    
   }
 
-  login() {
-    this.adalService.login();
-  }
-
-  logout() {
-    this.adalService.logOut();
-  }
-
-  get authenticated(): boolean {
-    return this.adalService.userInfo.authenticated;
-  }
-
-  navigate(path: string) {
+  navigate(event, path: string) {
+    event.preventDefault(); // prevent submit
     this.router.navigate([path]);
   }
+
 
 }

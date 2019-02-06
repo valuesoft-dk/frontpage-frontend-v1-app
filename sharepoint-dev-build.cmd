@@ -1,0 +1,1 @@
+ng build --source-map=false --base-href /_layouts/15/molytex/skueprove-app/ & xcopy /e /y .\dist\. "\\iis\c$\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS\Molytex"

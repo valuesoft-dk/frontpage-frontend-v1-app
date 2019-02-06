@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frontpage-frontend-v1-app": {
+    "skueprove-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontpage-frontend-v1-app",
+            "outputPath": "dist/skueprove-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "frontpage-frontend-v1-app:build"
+            "browserTarget": "skueprove-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "frontpage-frontend-v1-app:build:production"
+              "browserTarget": "skueprove-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frontpage-frontend-v1-app:build"
+            "browserTarget": "skueprove-app:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "frontpage-frontend-v1-app-e2e": {
+    "skueprove-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "frontpage-frontend-v1-app:serve"
+            "devServerTarget": "skueprove-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "frontpage-frontend-v1-app:serve:production"
+              "devServerTarget": "skueprove-app:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "frontpage-frontend-v1-app"
+  "defaultProject": "skueprove-app"
 }
